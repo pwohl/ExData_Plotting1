@@ -19,7 +19,6 @@ Hh.Po.Co.subdata<-rbind(Hh.Po.Co.data[Hh.Po.Co.data$Date=="1/2/2007",],
 
 
 
-#Plot 2
 #plot 4
 
 par(mfrow=c(2,2),mar=c(4,4,1,1))
@@ -49,7 +48,8 @@ with(Hh.Po.Co.subdata,
            col="blue"))
 legend("topright",lty=1,col=c(1,2,3),
        legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"),
-       bty="n")
+       bty="n",
+       cex=0.5)
 
 #4
 with(Hh.Po.Co.subdata,
