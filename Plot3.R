@@ -19,7 +19,7 @@ Hh.Po.Co.subdata<-rbind(Hh.Po.Co.data[Hh.Po.Co.data$Date=="1/2/2007",],
 
 
 
-#Plot 2
+#Plot 3
 with(Hh.Po.Co.subdata,
      plot(Date.Time,Sub_metering_1,
           type="l",
@@ -31,6 +31,6 @@ with(Hh.Po.Co.subdata,
 with(Hh.Po.Co.subdata,
      lines(Date.Time,Sub_metering_3,
            col="blue"))
-legend("topright",lty=1,col=c(1,2,3),legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
+legend("topright",lty=1,col=c(1,2,3),cex=0.5,legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
 
 dev.copy(png, file = "plot3.png")
