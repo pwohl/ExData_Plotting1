@@ -37,3 +37,5 @@ with(Hh.Po.Co.subdata,hist(Global_active_power,
                            ylim=c(0,1200),
                            xlim=c(0,6),                      
                            main="Global Acitve Power"))
+
+dev.copy(png, file = "plot1.png")
