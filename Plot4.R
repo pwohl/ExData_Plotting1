@@ -21,8 +21,11 @@ Hh.Po.Co.subdata<-rbind(Hh.Po.Co.data[Hh.Po.Co.data$Date=="1/2/2007",],
 
 #plot 4
 
+png("plot4.png", width=480, height=480)
+
 par(mfrow=c(2,2),mar=c(4,4,1,1))
 #1
+
 with(Hh.Po.Co.subdata,
      plot(Date.Time,Global_active_power,
           type="l",
@@ -48,9 +51,8 @@ with(Hh.Po.Co.subdata,
            col="blue"))
 legend("topright",lty=1,col=c(1,2,3),
        legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"),
-       bty="n",
-       cex=0.5)
-
+       bty="n")
+       
 #4
 with(Hh.Po.Co.subdata,
      plot(Date.Time, Global_reactive_power,
@@ -58,4 +60,4 @@ with(Hh.Po.Co.subdata,
           ylab="Global_reactive_power",
           xlab="datetime"))
 
-dev.copy(png, file = "plot4.png")
+dev.off()

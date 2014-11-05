@@ -20,10 +20,11 @@ Hh.Po.Co.subdata<-rbind(Hh.Po.Co.data[Hh.Po.Co.data$Date=="1/2/2007",],
 
 
 #Plot 2
+png("plot2.png", width=480, height=480)
 with(Hh.Po.Co.subdata,
      plot(Date.Time,Global_active_power,
           type="l",
           ylab="Global Acitve Power (kilowatts)",
           xlab=""))
 
-dev.copy(png, file = "plot2.png")
+dev.off()

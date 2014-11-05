@@ -30,12 +30,24 @@ Hh.Po.Co.subdata<-rbind(Hh.Po.Co.data[Hh.Po.Co.data$Date=="1/2/2007",],
 #plot 1
 #Global_active_power: household global minute-averaged active power (in kilowatt) 
 
-with(Hh.Po.Co.subdata,hist(Global_active_power,
+png("plot1.png", width=480, height=480)
+
+hist(Hh.Po.Co.subdata$Global_active_power,
                            col="red",
                            xlab="Global Acitve Power (kilowatts)",
                            #ylab="",
                            ylim=c(0,1200),
-                           xlim=c(0,6),                      
-                           main="Global Acitve Power"))
+                           #xlim=c(0,6),                      
+                           main="Global Acitve Power")
 
-dev.copy(png, file = "plot1.png")
+dev.off()
+
+
+
+
+
+
+
+
+
+
